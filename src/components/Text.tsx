@@ -4,11 +4,11 @@ import { Slot } from '@radix-ui/react-slot'
 
 export type TextProps = {
   size?: 'sm' | 'md' | 'lg'
-  text: ReactNode
+  children: ReactNode
   asChild?: boolean
 }
 
-export const Text = ({ size = 'md', text, asChild }: TextProps) => {
+export const Text = ({ size = 'md', children, asChild }: TextProps) => {
   const Component = asChild ? Slot : 'span'
   return (
     <Component
@@ -21,7 +21,7 @@ export const Text = ({ size = 'md', text, asChild }: TextProps) => {
         }
       )}
     >
-      {text}
+      {children}
     </Component>
   )
 }

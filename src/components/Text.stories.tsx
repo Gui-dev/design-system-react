@@ -5,7 +5,7 @@ export default {
   title: 'Components/Text',
   component: Text,
   args: {
-    text: 'Design System',
+    children: 'Design System',
     size: 'md'
   },
   argTypes: {
@@ -35,10 +35,10 @@ export const Large: StoryObj<TextProps> = {
 export const CustomComponent: StoryObj<TextProps> = {
   args: {
     asChild: true,
-    text: (<h1>Design System</h1>)
+    children: (<h1>Design System</h1>)
   },
   argTypes: {
-    text: {
+    children: {
       table: {
         disable: true
       }
