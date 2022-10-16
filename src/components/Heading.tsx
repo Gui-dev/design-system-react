@@ -3,12 +3,13 @@ import { Slot } from '@radix-ui/react-slot'
 import { clsx } from 'clsx'
 
 export type HeadingProps = {
-  text: ReactNode
+  children: ReactNode
   size?: 'sm' | 'md' | 'lg'
   asChild?: boolean
+  className?: string
 }
 
-export const Heading = ({ text, size = 'md', asChild }: HeadingProps) => {
+export const Heading = ({ children, size = 'md', asChild, className }: HeadingProps) => {
   const Component = asChild ? Slot : 'h1'
   return (
     <Component
@@ -18,10 +19,11 @@ export const Heading = ({ text, size = 'md', asChild }: HeadingProps) => {
           'text-lg': size === 'sm',
           'text-xl': size === 'md',
           'text-2xl': size === 'lg'
-        }
+        },
+        className
       )}
     >
-      {text}
+      {children}
     </Component>
   )
 }

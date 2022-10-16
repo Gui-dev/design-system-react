@@ -5,7 +5,7 @@ export default {
   title: 'Components/Heading',
   component: Heading,
   args: {
-    text: 'Design System',
+    children: 'Design System',
     size: 'md'
   },
   argTypes: {
@@ -35,10 +35,10 @@ export const Large: StoryObj<HeadingProps> = {
 export const CustomComponent: StoryObj<HeadingProps> = {
   args: {
     asChild: true,
-    text: (<h2>Design System</h2>)
+    children: (<h2>Design System</h2>)
   },
   argTypes: {
-    text: {
+    children: {
       table: {
         disable: true
       }
