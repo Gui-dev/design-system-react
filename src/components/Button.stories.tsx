@@ -5,7 +5,7 @@ export default {
   title: 'Components/Button',
   component: Button,
   args: {
-    title: 'Create Account'
+    children: 'Create Account'
   }
 } as Meta<ButtonProps>
 
